@@ -20,5 +20,8 @@ Thumbs.db
 # SSH Keys
 *.pem
 
-myenv/
-package-lock.json
+# Python virtual environment
+backend/myenv/
+
+# Node lock file
+frontend/package-lock.jsons
