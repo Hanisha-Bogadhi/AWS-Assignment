@@ -1,18 +1,21 @@
 # Python
 __pycache__/
 *.pyc
-myenv/
 venv/
-env/
 
 # Node
 node_modules/
+npm-debug.log
 
-# Environment files
+# Environment
 .env
 
-# VS Code
-.vscode/
-
-# OS files
+# OS
 .DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# SSH Keys
+*.pem
