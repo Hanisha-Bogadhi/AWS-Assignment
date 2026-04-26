@@ -29,6 +29,7 @@ This project demonstrates deployment of a Flask backend and Express frontend usi
 
 ## Cost Optimization
 - Stop EC2 instances when not in use
+- teminated EC2 for task 1 and task 2 after deploy
 - Stop ECS services when not required
 - Use AWS Free Tier whenever possible
 
