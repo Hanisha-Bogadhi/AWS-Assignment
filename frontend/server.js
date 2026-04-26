@@ -1,23 +1,19 @@
 const express = require("express");
-const fetch = require("node-fetch");
 
 const app = express();
-
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 app.set("view engine", "ejs");
 
-// Home route
 app.get("/", (req, res) => {
     res.render("index");
 });
 
-// Form submission
 app.post("/submit", async (req, res) => {
     try {
-        const url = "http://backend:5000/submit";
+        const url = "http://localhost:5000/submit";
         console.log("Calling:", url);
 
         const response = await fetch(url, {
@@ -28,8 +24,7 @@ app.post("/submit", async (req, res) => {
             body: JSON.stringify({
                 name: req.body.name,
                 email: req.body.email
-            }),
-            agent: new http.Agent()
+            })
         });
 
         const data = await response.json();
