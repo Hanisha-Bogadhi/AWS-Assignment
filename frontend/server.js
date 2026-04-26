@@ -17,7 +17,10 @@ app.get("/", (req, res) => {
 // Form submission
 app.post("/submit", async (req, res) => {
     try {
-        const response = await fetch("http://backend:5000/submit", {
+        const url = "http://backend:5000/submit";
+        console.log("Calling:", url);
+
+        const response = await fetch(url, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -25,14 +28,15 @@ app.post("/submit", async (req, res) => {
             body: JSON.stringify({
                 name: req.body.name,
                 email: req.body.email
-            })
+            }),
+            agent: new http.Agent()
         });
 
         const data = await response.json();
         res.send(data.message);
 
     } catch (error) {
-        console.error(error);
+        console.error("ERROR:", error);
         res.send("Error connecting to backend");
     }
 });
