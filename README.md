@@ -52,9 +52,9 @@ GitHub: <https://github.com/Hanisha-Bogadhi/AWS-Assignment.git>
 	- http://98.130.142.230:5000
 
 - Task 3:
-   - http://16.112.78.254:3000 
+   - http://16.112.33.44:3000 
 
-   - http://16.112.78.254:5000
+   - http://16.112.33.44:5000
 
 ### Task 1 & Task 2 Deployment Note:
 The applications for Task 1 (Single EC2 deployment) and Task 2 (Separate EC2 deployment) were successfully deployed and tested on Amazon EC2 instances. After verifying the deployments, the instances were terminated to avoid unnecessary AWS billing. Screenshots of successful execution and deployment are attached as proof.
